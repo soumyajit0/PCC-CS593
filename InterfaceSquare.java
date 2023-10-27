@@ -1,21 +1,26 @@
 import java.util.Scanner;
-interface Number {
+
+interface Number
+{
     int findSqr(int i);
 }
+
 class A implements Number
 {
-    public int findSqr(int i)
-    {
-        return i * i;
+    public int findSqr(int i){
+        return i*i;
     }
 }
+
 public class InterfaceSquare
-{ 
-    public static void main (String[] args)
-    { 
+{
+    public static void main(String[] args)
+    {
         A a = new A();
-        Scanner sc = new Scanner(System.in);  
+        Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
-        System.out.print(a.findSqr(i)); 
+        System.out.print(a.findSqr(i));
+        sc.close();
     }
+
 }
