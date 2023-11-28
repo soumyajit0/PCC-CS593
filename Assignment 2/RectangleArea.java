@@ -1,3 +1,4 @@
+
 /**
 
 Below part of a Java program is already stored in this system to input the rectangle dimensions, 
@@ -38,26 +39,25 @@ import java.util.Scanner;
 public class RectangleArea {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-       
+
         double a = sc.nextDouble();
         double b = sc.nextDouble();
-        
-        Rectangle r1 = new Rectangle( a, b );  // Parameterized constructor used  for object creation
-        System.out.println( r1.computeArea() );
+
+        Rectangle r1 = new Rectangle(a, b); // Parameterized constructor used for object creation
+        System.out.println(r1.computeArea());
 
     }
 }
 
-class Rectangle
-{
-	private double length,breadth;
-	Rectangle(double length,double breadth)
-	{
-		this.length=length;
-		this.breadth=breadth;
-	}
-	public double computeArea()
-	{
-		return (length*breadth);
-	}
+class Rectangle {
+    private double length, breadth;
+
+    Rectangle(double length, double breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public double computeArea() {
+        return (length * breadth);
+    }
 }

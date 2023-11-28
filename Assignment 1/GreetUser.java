@@ -1,3 +1,4 @@
+
 /**
 
 Write a Java program to input user's name and greet the user as stated in the example. 
@@ -14,14 +15,13 @@ Hello Mr. James Gosling!
 */
 
 import java.util.Scanner;
-public class GreetUser
-{
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
+
+public class GreetUser {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		String user;
-		user=sc.nextLine();
-		System.out.println("Hello "+user+"!");
+		user = sc.nextLine();
+		System.out.println("Hello " + user + "!");
 		sc.close();
 	}
 }

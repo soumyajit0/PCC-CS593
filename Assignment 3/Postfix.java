@@ -1,45 +1,39 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Stack;
+import java.util.Scanner;
 
-public class Postfix
-{
-	public static void main(String args[]) throws Exception
-	{
-		Scanner sc=new Scanner(System.in);
-		String exp[]=new String(sc.nextLine()).split(" ");
-		Stack<Integer>s=new Stack<Integer>();
-		int e1,e2;
-		for(int i=0;i<exp.length;i++)
-		{
-			String ch=exp[i];
-			switch(ch)
-			{
+public class Postfix {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String in = sc.nextLine();
+		String exp[] = in.split(" ");
+		Stack<Integer> stk = new Stack<Integer>();
+		int n;
+		for (int i = 0; i < exp.length; i++) {
+			String ch = exp[i];
+			switch (ch) {
 				case "+":
-					s.push(s.pop()+s.pop());
+					stk.push(stk.pop() + stk.pop());
 					break;
 				case "-":
-					
-					e1=s.pop();
-					if(s.isEmpty()==true)
-						e2=0;
-					else
-						e2=s.pop();
-					s.push(e2-e1);
-					break;
-				case "/":
-					
-					e1=s.pop();
-					e2=s.pop();
-					s.push(e2/e1);
+					if (stk.isEmpty() == true) {
+						n = 0;
+					} else {
+						n = stk.pop();
+					}
+					stk.push(stk.pop() - n);
 					break;
 				case "*":
-					s.push(s.pop()*s.pop());
+					stk.push(stk.pop() * stk.pop());
+					break;
+				case "/":
+					n = stk.pop();
+					stk.push(stk.pop() / n);
 					break;
 				default:
-					s.push(Integer.parseInt(ch));
+					stk.push(Integer.parseInt(ch));
 			}
 		}
-		System.out.println(s.pop());
+		System.out.println(stk.pop());
+		sc.close();
 	}
 }

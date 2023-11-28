@@ -1,3 +1,4 @@
+
 /**
 Complete the Java program with class A declaration implementing Number interface.
 
@@ -52,33 +53,30 @@ import java.util.Scanner;
 
 interface Number {
 
-    int findSqr(int i);  // Returns the square of n
+	int findSqr(int i); // Returns the square of n
 
 }
 
-class A implements Number
-{
-	public int findSqr(int i)
-	{
-		return (int)Math.pow(i,2);
+class A implements Number {
+	public int findSqr(int i) {
+		return (int) Math.pow(i, 2);
 	}
 }
 
-public class InterfaceSquare { 
+public class InterfaceSquare {
 
-	public static void main (String[] args){ 
+	public static void main(String[] args) {
 
-		A a = new A();   //Create an object of class A
+		A a = new A(); // Create an object of class A
 
 		// Read a number from the keyboard
-		
-		Scanner sc = new Scanner(System.in);  
+
+		Scanner sc = new Scanner(System.in);
 
 		int i = sc.nextInt();
 
-		System.out.print(a.findSqr(i)); 
+		System.out.print(a.findSqr(i));
 
-    } 
+	}
 
 }
-

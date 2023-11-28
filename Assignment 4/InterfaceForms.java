@@ -1,131 +1,124 @@
 /**
+ * 
+ * Complete the Java program for dealing with different type of forms and ensure
+ * outputs as in the example.
+ * /// Create interface Form1
+ * 
+ * interface Form1 {
+ * 
+ * public String base = "Form 1.";
+ * 
+ * abstract public void display1();
+ * 
+ * }
+ * 
+ * 
+ * 
+ * // Create interface Form2 which extends Form1
+ * 
+ * interface Form2 extends Form1 {
+ * 
+ * public String base = "Form 2.";
+ * 
+ * abstract public void display2();
+ * 
+ * }
+ * 
+ * 
+ * 
+ * // Create class FormGen is created which implements Form2
+ * 
+ * class FormGen implements Form2 {
+ * 
+ * public String base = "Form 3.";
+ * 
+ * //*******
+ * 
+ * ?????
+ * 
+ * //*******
+ * 
+ * }
+ * 
+ * 
+ * 
+ * // Main class
+ * 
+ * public class DemoForms {
+ * 
+ * public static void main(String[] args) {
+ * 
+ * // Instantiate FormGen and call display methods
+ * 
+ * FormGen form = new FormGen();
+ * 
+ * form.display1();
+ * 
+ * form.display2();
+ * 
+ * }
+ * 
+ * }
+ * 
+ * Provide only the missing part.
+ * For example:
+ * 
+ * Result
+ * What? Form 1.
+ * What? Form 2.
+ * 
+ * 
+ */
 
-Complete the Java program for dealing with different type of forms and ensure outputs as in the example. 
-/// Create interface Form1 
+// Create interface Form1
 
-interface Form1 { 
+interface Form1 {
 
-	public String base = "Form 1."; 
+	public String base = "Form 1.";
 
-	abstract public void display1(); 
-
-} 
-
-
-
-// Create interface Form2 which extends Form1 
-
-interface Form2 extends Form1 { 
-
-	public String base = "Form 2."; 
-
-	abstract public void display2(); 
-
-} 
-
-
-
-// Create class FormGen is created which implements Form2 
-
-class FormGen implements Form2 { 
-
-	public String base = "Form 3."; 
-
-	//*******
-
-	????? 
-
-	//*******
-
-} 
-
-
-
-// Main class 
-
-public class DemoForms { 
-
-	public static void main(String[] args) { 
-
-		// Instantiate FormGen and call display methods 
-
-		FormGen form = new FormGen(); 
-
-		form.display1(); 
-
-		form.display2(); 
-
-	} 
+	abstract public void display1();
 
 }
 
-Provide only the missing part.
-For example:
+// Create interface Form2 which extends Form1
 
-Result
-What? Form 1.
-What? Form 2.
+interface Form2 extends Form1 {
 
+	public String base = "Form 2.";
 
-*/
+	abstract public void display2();
 
-// Create interface Form1 
+}
 
-interface Form1 { 
+// Create class FormGen is created which implements Form2
 
-	public String base = "Form 1."; 
+class FormGen implements Form2 {
 
-	abstract public void display1(); 
+	public String base = "Form 3.";
 
-} 
-
-
-
-// Create interface Form2 which extends Form1 
-
-interface Form2 extends Form1 { 
-
-	public String base = "Form 2."; 
-
-	abstract public void display2(); 
-
-} 
-
-
-
-// Create class FormGen is created which implements Form2 
-
-class FormGen implements Form2 { 
-
-	public String base = "Form 3."; 
-
-	public void display1()
-	{
-		System.out.println("What? "+Form1.base);
+	public void display1() {
+		System.out.println("What? " + Form1.base);
 	}
-	
-	public void display2()
-	{
-		System.out.println("What? "+Form2.base);
+
+	public void display2() {
+		System.out.println("What? " + Form2.base);
 	}
-} 
+}
 
+// Main class
 
+public class InterfaceForms {
 
-// Main class 
+	public static void main(String[] args) {
 
-public class InterfaceForms { 
+		// Instantiate FormGen and call display methods
 
-	public static void main(String[] args) { 
+		FormGen form = new FormGen();
 
-		// Instantiate FormGen and call display methods 
+		form.display1();
 
-		FormGen form = new FormGen(); 
+		form.display2();
 
-		form.display1(); 
-
-		form.display2(); 
-
-	} 
+	}
 
 }
