@@ -124,7 +124,7 @@ class StackFullException extends Exception {
 
     /* Override toString() */
     public String toString() {
-        return ("[Full-5] ");
+        return ("[Full-" + size + "] ");
     }
 
 }
